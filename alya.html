@@ -34,8 +34,10 @@
     <script>
         const mainContent = document.getElementById('main-content');
         const messageContainer = document.getElementById('message-container');
+        // URL di sini saya ubah sedikit untuk mengikuti konvensi 'main' branch, bukan 'refs/heads/main'
         const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
 
+        // Fungsi displayComicDetails tidak perlu diubah, karena ia hanya merender data yang diberikan.
         function displayComicDetails(data) {
             mainContent.innerHTML = `
                 <section class="detail-info">
@@ -71,16 +73,14 @@
             });
             
             const chapterList = mainContent.querySelector('#chapter-list-ul');
-            const comicParam = data.param; // misal: "eternally-regressing-knight"
+            const comicParam = data.param;
 
             data.chapters.forEach(chapter => {
-                // Ekstrak angka dari judul chapter, misal: "64" dari "Chapter 64"
                 const chapterNumberMatch = chapter.chapter.match(/\d+/);
-                if (!chapterNumberMatch) return; // Lewati jika tidak ada angka
+                if (!chapterNumberMatch) return;
                 const chapterNumber = chapterNumberMatch[0];
 
                 const listItem = document.createElement('li');
-                // Buat link ke `baca-chapter.html` dengan parameter `comic` dan `chapnum`
                 listItem.innerHTML = `
                     <a href="baca-chapter.html?comic=${comicParam}&chapnum=${chapterNumber}">
                         <span class="chapter-title">${chapter.chapter}</span>
@@ -108,30 +108,29 @@
             mainContent.style.display = 'block';
         }
         
+        // =========================================================
+        // === FUNGSI FETCH YANG SUDAH DISESUAIKAN ===
+        // =========================================================
         async function fetchComicDetails() {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const comicParam = urlParams.get('comic');
+            // Hapus semua logika yang membaca parameter dari URL
+            // const queryString = window.location.search;
+            // const urlParams = new URLSearchParams(queryString);
+            // const comicParam = urlParams.get('comic');
 
-            if (!comicParam) {
-                messageContainer.textContent = 'Komik tidak ditemukan. Silakan kembali ke halaman utama.';
-                messageContainer.style.color = 'red';
-                return;
-            }
-            
             messageContainer.textContent = 'Loading...';
             
-            const fetchUrl = `${API_BASE_URL}${comicParam}/${comicParam}.json`;
+            // Langsung gunakan URL statis yang dituju
+            const fetchUrl = `${API_BASE_URL}alya.json`;
 
             try {
                 const response = await fetch(fetchUrl);
                 if (!response.ok) {
-                    throw new Error(`Komik dengan param "${comicParam}" tidak ditemukan (Status ${response.status})`);
+                    throw new Error(`Gagal memuat alya.json (Status ${response.status})`);
                 }
                 const jsonData = await response.json();
                 
-                messageContainer.style.display = 'none';
-                displayComicDetails(jsonData.data);
+                messageContainer.style.display = 'none'; // Sembunyikan pesan loading
+                displayComicDetails(jsonData.data); // Tampilkan data
 
             } catch (error) {
                 console.error("Fetch Error:", error);

@@ -61,7 +61,7 @@
 
             try {
                 // 1. Fetch metadata untuk navigasi
-                const metaUrl = `${API_BASE_URL}${comicParam}.json`;
+                const metaUrl = `${API_BASE_URL}${comicParam}/${comicParam}.json`;
                 const metaResponse = await fetch(metaUrl);
                 if (!metaResponse.ok) throw new Error('Gagal memuat detail komik.');
                 const metaData = (await metaResponse.json()).data;
@@ -127,7 +127,7 @@
                 };
                 
                 // 4. Fetch data GAMBAR menggunakan URL baru
-                const chapterImagesUrl = `${API_BASE_URL}chapter${chapterNumber}.json`;
+                const chapterImagesUrl = `${API_BASE_URL}/${comicParam}/chapter${chapterNumber}.json`;
                 const chapterResponse = await fetch(chapterImagesUrl);
 
                 if (!chapterResponse.ok) {

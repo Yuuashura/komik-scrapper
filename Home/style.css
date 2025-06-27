@@ -1,0 +1,404 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .home {
+    border-bottom: 2px solid white;
+}
+
+.judul {
+    color: white;
+}
+
+.judul span {
+    color: aqua;
+}
+
+.nav a {
+    font-size: 1.04rem;
+    margin: 0 15px;
+    padding: 8px 0;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgb(200, 200, 200);
+}
+
+.cari {
+    display: flex;
+    background-color: rgb(148, 92, 201);
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.cari a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.cari img {
+    width: 20px;
+    height: 20px;
+}
+
+.cari input {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: transparent;
+}
+
+.cari input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.cari input:focus {
+    outline: none;
+}
+
+.update-container {
+    cursor: pointer;
+     flex: 0 0 100%; 
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: rgba(27, 27, 27, 0.562);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+}
+
+.left-up {
+    flex: 1;
+    max-width: 60%;
+    color: #ffffff;
+}
+
+.chapter {
+    color: white;
+    font-size: 2rem;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+.left-up h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.keterangan {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.genres {
+    display: flex;
+    gap: 10px;
+}
+
+.genres p {
+    border: 1px solid white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    background-color: #1b1b1b00;
+    transition: 0.2s;
+}
+
+.genres p:hover{
+    background-color: #ffffff22;
+    color: rgb(0, 0, 0);
+}
+
+
+.reading-now{
+    display: inline-block;
+    background-color: blueviolet;
+    font-size: 1.2rem;
+    padding: 8px 30px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px #00000025;
+    transition: 0.3s;
+}
+
+.reading-now:hover{
+    transform: scale(1.02) translateY(2px);
+}
+
+
+.right-up {
+    flex-basis: 20%;
+    margin-right: 150px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transform: skewX(-15deg);
+    transition: 0.4s ease-in-out;
+    cursor:grab;
+}
+
+ .right-up:hover {
+    transform: skewX(0deg) scale(1.1);
+}
+
+.right-up img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.right-up .cov2 {
+    opacity: 0;
+}
+.right-up:hover .cov1 {
+
+    opacity: 0;
+}
+.right-up:hover .cov2 {
+    opacity: 1;
+}
+
+.slider{
+    position: relative;
+    width: 85%;
+    margin: 40px auto;
+}
+
+.slider-items{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+        /* H I D E  S R O L L  B A R  */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.btn-slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-slide:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+#next-btn{
+    right: -25px;
+}
+
+#prev-btn{
+    left: -25px;
+}
+
+.container-popular{
+    width: 85%;
+    margin: 40px auto;
+    border-radius: 6px;
+    background-color: #201f1f;
+    padding-bottom: 20px;
+}
+
+.header-popular{
+    padding: 0px 3px;
+    margin-bottom: 10px;
+    margin: 10px 0px 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+}
+
+.items-popular{
+    display: grid;
+    grid-template-columns: repeat(7, minmax(150px,1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.logo-komik{
+    background-color: white;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card .logo-komik img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease;
+}
+
+.card .logo-komik img:hover{
+    transform: scale(1.1);
+}
+
+.deskripsi-komik h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s ease;
+}
+
+.deskripsi-komik h3:hover {
+    color: #9c27b0;
+}
+
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapter-list li {
+    margin-left: 10px;
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    background-color: #9b27b040;
+    margin: 9px 0px 9px 4px;
+    border-radius: 20px;
+}
+
+.chapter-list li a:hover {
+    color: #9c27b0;
+    transition: 0.2s ease;
+
+}
+
+.release-time{
+    list-style: none;
+}
+
+.release-time li{
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    margin: 9px 30px 9px 0px;
+}
+
+.chap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.next-new-btn{
+    text-align: center;
+}
+
+.new-next{
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 20px 0;
+    background-color: blueviolet;
+}
+
+
+
+
+
+/* FOOTER  */
+footer{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 10px 0px 2px 0px;
+
+}
+
+
+.medsos{
+    margin: 20px;
+    width: 40px;
+    display: inline-block;
+}
+
+.medsos img{
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.medsos img:hover{
+    background-color: #1b1b1b25;
+    transform: scale(1.1);
+}
+
+.text-footer{
+    margin: 0px auto 1px auto;
+    width: 70%;
+}

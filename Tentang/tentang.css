@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .home {
+    border-bottom: 2px solid white;
+}
+
+.judul {
+    color: white;
+}
+
+.judul span {
+    color: aqua;
+}
+
+.nav a {
+    font-size: 1.04rem;
+    margin: 0 15px;
+    padding: 8px 0;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgb(200, 200, 200);
+}
+
+.cari {
+    display: flex;
+    background-color: rgb(148, 92, 201);
+    border-radius: 4px;
+    margin-right: 20px;
+    opacity: 0;
+}
+
+.cari a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.cari img {
+    width: 20px;
+    height: 20px;
+}
+
+.cari input {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: transparent;  
+}
+
+.cari input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.cari input:focus {
+    outline: none;
+}
+
+
+
+.container {
+    margin: 140px auto;
+    width: 35%;
+    background-color:#393939;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0px 0px 50px 0px;
+}
+
+
+.profile-pict {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-top: -80px;
+    border: 3px solid blueviolet;
+    box-shadow: 0px 5px 5px rgba(137, 43, 226, 0.311);
+}
+
+.profile-pict img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.nama{
+    text-shadow: 0px 2px 5px #8a2be280;
+    margin-bottom: 40px;
+}
+
+.data-diri{
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    padding: 7px 20px;
+    text-shadow: 0px 2px 5px #8a2be280;
+    border-bottom: 1px solid #ffffff30;
+}
+
+#dat{
+    border-bottom: none;
+}
+
+.label{
+    font-weight: 600;
+}
+
+.tombol{
+    background-color: blueviolet;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 4px 9px;
+    border-radius: 8px;
+}
+
+.galery {
+    background-color: #393939;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.galery::-webkit-scrollbar {
+    height: 8px;
+}
+
+
+
+/* ========================================== */
+/* hasil ngulik */
+/* untuk belakang scrollbarnya */
+.galery::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 10px;
+}
+
+
+/* untuk scrollbac itu sendiri */
+.galery::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* scrollbarnya ketika di hover */
+.galery::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* =============================================== */
+
+.card {
+    flex-shrink: 0;     
+    width: 150px;
+    height: 170px;
+    overflow: hidden;
+    margin: 4px 8px; 
+    padding: 0; 
+    background-color: #555;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+    /* F O O T E R  */
+    footer{
+        background-color: blueviolet;
+        text-align: center;
+        padding: 10px 0px 2px 0px;
+    
+    }
+    .medsos{
+        margin: 20px;
+        width: 40px;
+        display: inline-block;
+    }
+    
+    .medsos img{
+        width: 30px;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+    
+    .medsos img:hover{
+        background-color: #1b1b1b25;
+        transform: scale(1.1);
+    }
+    
+    .text-footer{
+        margin: 0px auto 1px auto;
+        width: 70%;
+    }

@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: blueviolet;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .home {
+    border-bottom: 2px solid white;
+}
+
+.judul {
+    color: white;
+}
+
+.judul span {
+    color: aqua;
+}
+
+.nav a {
+    font-size: 1.04rem;
+    margin: 0 15px;
+    padding: 8px 0;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.nav a:hover {
+    color: rgb(200, 200, 200);
+}
+
+.cari {
+    display: flex;
+    background-color: rgb(148, 92, 201);
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.cari a {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.cari img {
+    width: 20px;
+    height: 20px;
+}
+
+.cari input {
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: transparent;  
+}
+
+.cari input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.cari input:focus {
+    outline: none;
+}
+
+
+
+
+
+/* MAIN  */
+.container-popular{
+    width: 85%;
+    margin: 40px auto;
+    border-radius: 6px;
+    background-color: #201f1f;
+    padding-bottom: 20px;
+}
+
+.header-popular{
+    padding: 0px 3px;
+    margin-bottom: 10px;
+    margin: 10px 0px 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+}
+
+.search-items{
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 10px;
+}
+
+.search-items select{
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+    background-color: #949191;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.search-items select:focus {
+    border: none;
+    outline: none;
+}
+
+.search-items option{
+    color: white;
+    background-color: #1b1b1b;
+    font-size: 1rem;
+
+}
+
+.search-items a{
+    background-color: blueviolet;
+    font-weight: 560;
+    margin: auto;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+
+
+.items-popular{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px,1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+.logo-komik{
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card .logo-komik img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease;
+}
+
+.card .logo-komik img:hover{
+    transform: scale(1.1);
+}
+
+.deskripsi-komik h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s ease;
+}
+
+.deskripsi-komik h3:hover {
+    color: #9c27b0;
+}
+
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapter-list li {
+    margin-left: 10px;
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    margin: 0px 0px 9px 0px;
+    border-radius: 20px;
+}
+
+.chapter-list li a:hover {
+    color: #9c27b0;
+    transition: 0.2s ease;
+
+}
+
+.chap{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.next-new-btn{
+    text-align: center;
+}
+
+.new-next{
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 20px 0;
+    background-color: blueviolet;
+}
+
+
+
+
+
+
+/* UDAH LUMAYAN PAHAM BEFORE, ABSOLUTE, RELATIF DAN CONTENT */
+/* WITH AI  */
+/* Wadah utama untuk rating */
+.rating {
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara bintang dan angka */
+    font-family: sans-serif;
+    color: #e0e0e0;
+}
+
+/* Wadah untuk menumpuk bintang */
+.stars-outer {
+    position: relative;
+    display: inline-block;
+    font-size: 24px; /* Atur ukuran bintang di sini */
+}
+
+/* Pseudo-element untuk bintang KOSONG (lapisan bawah) */
+.stars-outer::before {
+    content: "★★★★★";
+    color: #444; /* Warna bintang kosong */
+}
+
+/* Wadah untuk bintang ISI (lapisan atas) */
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden; /* Ini yang akan "memotong" bintang */
+    
+    /* Atur lebarnya sesuai rating. Akan kita hitung di bawah */
+    width: 0; 
+}
+
+/* Pseudo-element untuk bintang ISI (lapisan atas) */
+.stars-inner::before {
+    content: "★★★★★";
+    color: #f8ce0b; /* Warna bintang yang terisi */
+}
+
+.rating-number {
+    font-size: 1rem;
+    font-weight: bold;
+}   
+
+
+
+
+
+
+
+
+/* NO AI  */
+
+/* FOOTER  */
+footer{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 10px 0px 2px 0px;
+
+}
+
+
+.medsos{
+    margin: 20px;
+    width: 40px;
+    display: inline-block;
+}
+
+.medsos img{
+    width: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.medsos img:hover{
+    background-color: #1b1b1b25;
+    transform: scale(1.1);
+}
+
+.text-footer{
+    margin: 0px auto 1px auto;
+    width: 70%;
+}

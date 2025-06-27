@@ -1,0 +1,86 @@
+{
+"next_page": "page2.json",
+"prev_page": null,
+"data": [
+{
+"title": "Eternally Regressing Knight",
+"description": "Pengorbanan dan harapan menjadi tema utama dalam pertempuran sang kesatria melawan takdirnya.",
+"latest_chapter": "Chapter 64",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/eternally-regressing-knight/manga_img_horizontal-A1-Eternally-Regressing-Knight.jpg",
+"param": "eternally-regressing-knight",
+"detail_url": "detail-komik.html"
+},
+{
+"title": "Number One Star Instructor Master Baek",
+"description": "Master Baek melatih generasi muda dalam seni bela diri sambil menghadapi berbagai tantangan berat.",
+"latest_chapter": "Chapter 126",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/number-one-star-instructor-master-baek/manga_img_horizontal-Komik-Number-One-Star-Instructor-Master-Baek.jpg",
+"param": "number-one-star-instructor-master-baek",
+"detail_url": "http://localhost:5500/api/komiku/number-one-star-instructor-master-baek"
+},
+{
+"title": "Youngest Son of the NamGung Clan",
+"description": "Seorang anak bungsu yang dianggap lemah justru menunjukkan kekuatannya.",
+"latest_chapter": "Chapter 82",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/youngest-son-of-the-namgung-clan/manga_img_horizontal-Komik-Youngest-Son-of-the-NamGung-Clan.jpg",
+"param": "youngest-son-of-the-namgung-clan",
+"detail_url": "http://localhost:5500/api/komiku/youngest-son-of-the-namgung-clan"
+},
+{
+"title": "SSS-level Paladin Who Breaks All Logic",
+"description": "Perjalanan seorang paladin yang berusaha mempertahankan nilai kemanusiaan di tengah kekuatannya.",
+"latest_chapter": "Chapter 75",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/sss-level-paladin-who-breaks-all-logic/manga_img_horizontal-Back-SSS-level-Paladin-Who-Breaks-All-Logic.jpg",
+"param": "sss-level-paladin-who-breaks-all-logic",
+"detail_url": "http://localhost:5500/api/komiku/sss-level-paladin-who-breaks-all-logic"
+},
+{
+"title": "God of Martial Arts",
+"description": "Seorang pemuda berupaya menguasai seni bela diri paling hebat untuk menjadi legenda.",
+"latest_chapter": "Chapter 852",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/god-of-martial-arts/manga_img_horizontal-Manhua-God-of-Martial-Arts.png",
+"param": "god-of-martial-arts",
+"detail_url": "http://localhost:5500/api/komiku/god-of-martial-arts"
+},
+{
+"title": "I Was Immediately Mistaken for a Monster Genius Actor",
+"description": "Identitas yang disangka-sangka menuntun ke petualangan dan pembelajaran yang mendalam.",
+"latest_chapter": "Chapter 57",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/i-was-immediately-mistaken-for-a-monster-genius-actor/manga_img_horizontal-A1-I-Was-Immediately-Mistaken-for-a-Monster-Genius-Actor.jpg",
+"param": "i-was-immediately-mistaken-for-a-monster-genius-actor",
+"detail_url": "http://localhost:5500/api/komiku/i-was-immediately-mistaken-for-a-monster-genius-actor"
+},
+{
+"title": "The Unbeatable Dungeon’s Lazy Boss",
+"description": "Kisah unik tentang manajer penjara bawah tanah yang malas tapi kuat.",
+"latest_chapter": "Chapter 82",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/the-unbeatable-dungeons-lazy-boss/manga_img_horizontal-Back-The-Unbeatable-Dungeons-Lazy-Boss.jpg",
+"param": "the-unbeatable-dungeons-lazy-boss",
+"detail_url": "http://localhost:5500/api/komiku/the-unbeatable-dungeons-lazy-boss"
+},
+{
+"title": "It All Starts With Trillions Of Nether Currency",
+"description": "Mata uang Nether membawa peluang dan konflik yang tidak terduga bagi tokoh utama",
+"latest_chapter": "Chapter 142",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/it-all-starts-with-trillions-of-nether-currency/manga_img_horizontal-A1-It-All-Starts-With-Trillions-Of-Nether-Currency.png",
+"param": "it-all-starts-with-trillions-of-nether-currency",
+"detail_url": "http://localhost:5500/api/komiku/it-all-starts-with-trillions-of-nether-currency"
+},
+{
+"title": "I Really Don’t Want to Be Reborn",
+"description": "Cerita yang mengangkat tema perjuangan melawan takdir dan pencarian jati diri.",
+"latest_chapter": "Chapter 291",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/i-really-dont-want-to-be-reborn/manga_img_horizontal-Komik-I-Really-Dont-Want-to-Be-Reborn.png",
+"param": "i-really-dont-want-to-be-reborn",
+"detail_url": "http://localhost:5500/api/komiku/i-really-dont-want-to-be-reborn"
+},
+{
+"title": "Disastrous Necromancer",
+"description": "Seorang nekromancer muda berjuang mengendalikan kekuatan gelap yang ia bangkitkan.",
+"latest_chapter": "Chapter 191",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/disastrous-necromancer/manga_img_horizontal-Back-Disastrous-Necromancer.jpg",
+"param": "disastrous-necromancer",
+"detail_url": "http://localhost:5500/api/komiku/disastrous-necromancer"
+}
+]
+}

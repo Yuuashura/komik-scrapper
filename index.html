@@ -1,0 +1,664 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MoonKomik</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    body {
+        background-color: #1b1b1b;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        width: 100%;
+        background-color: blueviolet;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav .home {
+        border-bottom: 2px solid white;
+    }
+
+    .judul {
+        color: white;
+    }
+
+    .judul span {
+        color: aqua;
+    }
+
+    .nav a {
+        font-size: 1.04rem;
+        margin: 0 15px;
+        padding: 8px 0;
+        color: white;
+        transition: 0.3s ease;
+    }
+
+    .nav a:hover {
+        color: rgb(200, 200, 200);
+    }
+
+    .cari {
+        display: flex;
+        background-color: rgb(148, 92, 201);
+        border-radius: 4px;
+        margin-right: 20px;
+    }
+
+    .cari a {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .cari img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cari input {
+        border: none;
+        padding: 10px 10px;
+        border-radius: 4px;
+        color: white;
+        background-color: transparent;
+    }
+
+    .cari input::placeholder {
+        color: white;
+        opacity: 0.8;
+    }
+
+    .cari input:focus {
+        outline: none;
+    }
+
+    .update-container {
+        cursor: pointer;
+        flex: 0 0 100%; 
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        background-color: rgba(27, 27, 27, 0.562);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100%;
+    }
+
+    .left-up {
+        flex: 1;
+        max-width: 60%;
+        color: #ffffff;
+    }
+
+    .chapter {
+        color: white;
+        font-size: 2rem;
+        padding: 5px 10px;
+        display: inline-block;
+        margin-bottom: 15px;
+        font-weight: bold;
+        border-bottom: 1px solid white;
+    }
+
+    .left-up h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .keterangan {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .genres {
+        display: flex;
+        gap: 10px;
+    }
+
+    .genres p {
+        border: 1px solid white;
+        padding: 6px 12px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        background-color: #1b1b1b00;
+        transition: 0.2s;
+    }
+
+    .genres p:hover{
+        background-color: #ffffff22;
+        color: rgb(0, 0, 0);
+    }
+
+
+    .reading-now{
+        display: inline-block;
+        background-color: blueviolet;
+        font-size: 1.2rem;
+        padding: 8px 30px;
+        margin: 20px 0px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px #00000025;
+        transition: 0.3s;
+    }
+
+    .reading-now:hover{
+        transform: scale(1.02) translateY(2px);
+    }
+
+
+    .right-up {
+        flex-basis: 20%;
+        margin-right: 150px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        transform: skewX(-15deg);
+        transition: 0.4s ease-in-out;
+        cursor:grab;
+    }
+
+    .right-up:hover {
+        transform: skewX(0deg) scale(1.1);
+    }
+
+    .right-up img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .right-up .cov2 {
+        opacity: 0;
+    }
+    .right-up:hover .cov1 {
+
+        opacity: 0;
+    }
+    .right-up:hover .cov2 {
+        opacity: 1;
+    }
+
+    .slider{
+        position: relative;
+        width: 85%;
+        margin: 40px auto;
+    }
+
+    .slider-items{
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+            /* H I D E  S R O L L  B A R  */
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+
+    .btn-slide{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: rgb(0, 0, 0);
+        font-size: 2rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .btn-slide:hover {
+        background-color: rgb(209, 209, 209);
+    }
+
+    #next-btn{
+        right: -25px;
+    }
+
+    #prev-btn{
+        left: -25px;
+    }
+
+    .container-popular{
+        width: 85%;
+        margin: 40px auto;
+        border-radius: 6px;
+        background-color: #201f1f;
+        padding-bottom: 20px;
+    }
+
+    .header-popular{
+        padding: 0px 3px;
+        margin-bottom: 10px;
+        margin: 10px 0px 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+    }
+
+    .items-popular{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(120px,1fr)); /* Dibuat lebih responsif */
+        gap: 15px; /* Menambahkan jarak antar card */
+        padding: 0 20px; /* Menambahkan padding */
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Lebar card menyesuaikan grid */
+        overflow: hidden;
+    }
+
+
+    .logo-komik{
+        background-color: #333; /* Warna placeholder saat gambar loading */
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .card .logo-komik img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.2s ease;
+    }
+
+    .card .logo-komik img:hover{
+        transform: scale(1.1);
+    }
+
+    .deskripsi-komik h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        margin-top: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: 0.2s ease;
+        cursor: pointer;
+    }
+
+    .deskripsi-komik h3:hover {
+        color: #9c27b0;
+    }
+
+    .chapter-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .chapter-list li {
+        margin-left: 10px;
+        padding: 3px 5px;
+        font-size: 0.8rem; /* Sedikit diperbesar agar mudah dibaca */
+        background-color: #9b27b040;
+        margin: 5px 0;
+        border-radius: 4px; /* Disesuaikan */
+    }
+
+    .chapter-list li a:hover {
+        color: #9c27b0;
+        transition: 0.2s ease;
+
+    }
+
+    .release-time{
+        list-style: none;
+    }
+
+    .release-time li{
+        padding: 3px 5px;
+        font-size: 0.7rem;
+        margin: 9px 30px 9px 0px;
+    }
+
+    .chap{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .next-new-btn{
+        text-align: center;
+    }
+
+    .new-next{
+        font-size: 1rem;
+        padding: 8px 20px; /* Diperbesar agar mudah diklik */
+        border-radius: 4px;
+        margin: 20px 5px;
+        background-color: blueviolet;
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .new-next:hover {
+        background-color: rgb(121, 40, 197);
+    }
+
+    .new-next.disabled {
+        background-color: #5a3b72;
+        color: #a0a0a0;
+        cursor: not-allowed;
+        pointer-events: none; /* Mencegah event click */
+    }
+
+    /* FOOTER  */
+    footer{
+        background-color: blueviolet;
+        text-align: center;
+        padding: 10px 0px 2px 0px;
+
+    }
+
+
+    .medsos{
+        margin: 20px;
+        width: 40px;
+        display: inline-block;
+    }
+
+    .medsos img{
+        width: 30px;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .medsos img:hover{
+        background-color: #1b1b1b25;
+        transform: scale(1.1);
+    }
+
+    .text-footer{
+        margin: 0px auto 1px auto;
+        width: 70%;
+    }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="#"><i><h1 class="judul">Moon<span>Komik</span></h1></i></a>
+            <div class="nav">
+                <a href="#" class="home"><p>Home</p></a>
+                <a href="/Manga-List/manga-list.html"><p>Manga List</p></a>
+                <a href="/Login/login.html"><p>Masuk</p></a>
+                <a href="/Register/register.html"><p>Daftar</p></a>
+                <a href="/Tentang/tentang.html"><p>Tentang</p></a>
+            </div>
+            <div class="cari">
+                <input type="text" placeholder="Search">
+                <a href="#"><img src="../assets/search.png" alt="Search"></a>
+            </div>
+        </header>
+
+        <div class="slider">
+            <button id="prev-btn" class="btn-slide"><</button>
+
+            <div class="slider-items">
+
+                <div class="update-container" style="background-image: url('../assets/bg3.jpeg');">
+                    <div class="filter">
+                <div class="left-up">
+                    <p class="chapter">Chapter 112</p>
+                    <h1>Alya Sometimes Hides Her Feelings in Russian</h1>
+                    <div class="keterangan">
+                        <p>Orang tua perlu tahu bahwa Alya Sometimes Hides Her Feelings in Russian adalah drama sekolah menengah tentang dua teman sekelas yang berusaha mencari tahu perasaan mereka satu sama lain...</p>
+                    </div>
+                    <div class="genres">
+                        <p>Comedy</p>
+                        <p>Romance</p>
+                        <p>School</p>
+                        <p>Slice of Life</p>
+                    </div>
+                    <div class="reading-now">
+                        <a href="#">Start Read</a>
+                    </div>
+                </div>
+                <div class="right-up">
+                    <img src="../assets/alya-cover.jpeg" alt="Alya Cover" class="cov1">
+                    <img src="../assets/alya-cover3.jpeg" alt="Alya Cover" class="cov2">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <button id="next-btn" class="btn-slide">></button>
+    </div>
+
+
+
+
+
+
+            <div class="container-popular">
+        <div class="header-popular">
+            <h1>Popular Today🔥</h1>
+        </div>
+        <div class="items-popular">
+            </div>
+    <div class="next-new-btn">
+        <a id="new-prev" class="new-next">Prev</a>
+        <a id="new-next" class="new-next">Next</a>
+    </div>
+    </div>
+
+
+
+    <footer>
+        <div class="medsos">
+            <a href="https://instagram.com/yudis.ashura" target="_blank"><span><img src="../icon/instagram.png" alt=""></span></a>
+        </div>
+        <div class="medsos">
+            <a href="https://github.com/yuuashura" target="_blank"><span><img src="../icon/github.png" alt=""></span></a>
+        </div>
+        <div class="medsos">
+            <a href="https://facebook.com/4sa.cyber" target="_blank"><span><img src="../icon/facebook.png" alt=""></span></a>
+        </div>
+        <div class="medsos">
+            <a href="https://telegram.com/#" target="_blank"><span><img src="../icon/telegram.png" alt=""></span></a>
+        </div>
+
+        <div class="text-footer">
+            <p>
+                All the comics on this website are only previews of the original comics,there may be many language errors, character names, and story lines. For the original version, please buy the comic if it's available in your city.</p>
+                <br><hr>
+                <p>&copy; MoonKomik</p>
+            </div>
+
+    </footer>
+    </body>
+    <script>
+        // --- LOGIKA SLIDER (BIARKAN SEPERTI ADANYA) ---
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const sliderItems = document.querySelector('.slider-items');
+        
+        if (nextButton && prevButton && sliderItems) {
+            nextButton.addEventListener('click', () => {
+                const scrollDistance = sliderItems.clientWidth;
+                sliderItems.scrollLeft += scrollDistance;
+            });
+        
+            prevButton.addEventListener('click', () => {
+                const scrollDistance = sliderItems.clientWidth;
+                sliderItems.scrollLeft -= scrollDistance;
+            });
+        }
+        
+        
+        // --- LOGIKA BARU UNTUK PAGINASI BERBASIS NOMOR HALAMAN ---
+        
+        const popularItemsContainer = document.querySelector('.items-popular');
+        const newNextBtn = document.getElementById('new-next');
+        const newPrevBtn = document.getElementById('new-prev');
+        
+        // URL Dasar dari repositori data Anda (diakhiri dengan /)
+        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+        
+        // Variabel untuk melacak status saat ini
+        let currentPage = 1;
+        let isFetching = false; // Mencegah klik ganda saat data sedang dimuat
+        
+// INI UNTUK SCRIPT DI index.html
+
+function displayComics(comics) {
+    popularItemsContainer.innerHTML = '';
+    if (!comics || comics.length === 0) {
+        // ... (kode error handling)
+        return;
+    }
+
+    comics.forEach(comic => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        // --- PERUBAHAN DI SINI ---
+        // Link <a> sekarang mengarah ke detail-komik.html
+        // dengan menambahkan ?comic=[nama-param-unik]
+        card.innerHTML = `
+            <a href="detail-komik.html?comic=${comic.param}" class="logo-komik">
+                <img src="${comic.thumbnail}" alt="Sampul ${comic.title}">
+            </a>
+            <div class="deskripsi-komik">
+                <h3>
+                    <a href="detail-komik.html?comic=${comic.param}">${comic.title}</a>
+                </h3>
+                <div class="chap">
+                    <ul class="chapter-list">
+                        <li><a href="#">${comic.latest_chapter}</a></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+        popularItemsContainer.appendChild(card);
+    });
+}
+        
+        function updatePaginationButtons() {
+            // Tombol "Prev" aktif jika halaman saat ini lebih besar dari 1
+            if (currentPage > 1) {
+                newPrevBtn.classList.remove('disabled');
+            } else {
+                newPrevBtn.classList.add('disabled');
+            }
+        
+            // Kita asumsikan tombol "Next" selalu aktif,
+            // dan akan dinonaktifkan hanya jika fetch ke halaman berikutnya gagal.
+            newNextBtn.classList.remove('disabled');
+        }
+        
+        async function fetchAndDisplayComics(pageNumber) {
+            // Jika sedang fetching, jangan lakukan apa-apa
+            if (isFetching) return;
+            
+            isFetching = true;
+            popularItemsContainer.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Loading...</p>';
+            
+            // Membangun URL lengkap berdasarkan nomor halaman
+            const fullUrl = `${API_BASE_URL}page${pageNumber}.json`;
+        
+            try {
+                const response = await fetch(fullUrl);
+                
+                // Jika response 404 (Not Found) atau error lain, lempar error
+                if (!response.ok) {
+                    throw new Error(`Halaman ${pageNumber} tidak ditemukan.`);
+                }
+                
+                const data = await response.json();
+                displayComics(data.data);
+        
+                // Hanya jika berhasil, update nomor halaman saat ini
+                currentPage = pageNumber;
+                
+            } catch (error) {
+                console.error("Detail Error Fetch:", error);
+                // Jika terjadi error (misal: halaman terakhir), tampilkan halaman sebelumnya
+                // dan nonaktifkan tombol 'Next'
+                popularItemsContainer.innerHTML = `<p style="text-align: center; color: yellow; grid-column: 1 / -1;">Anda sudah di halaman terakhir.</p>`;
+                // Muat ulang data halaman yang valid terakhir kali
+                fetchAndDisplayComics(currentPage); 
+                newNextBtn.classList.add('disabled');
+            } finally {
+                // Apapun hasilnya, proses fetching selesai
+                isFetching = false;
+                // Update status tombol berdasarkan currentPage yang sekarang
+                updatePaginationButtons();
+            }
+        }
+        
+        if (newNextBtn && newPrevBtn) {
+            newNextBtn.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                fetchAndDisplayComics(currentPage + 1); // Panggil halaman berikutnya
+            });
+        
+            newPrevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    fetchAndDisplayComics(currentPage - 1); // Panggil halaman sebelumnya
+                }
+            });
+        }
+        
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            if(popularItemsContainer) {
+                // Memuat halaman pertama saat web dibuka
+                fetchAndDisplayComics(1);
+            }
+        });
+        </script>
+    </html>

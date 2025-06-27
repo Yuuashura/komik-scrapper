@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonKomik</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* ... CSS Anda tidak berubah ... */
+        * { padding: 0; margin: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; } a { color: inherit; text-decoration: none; } body { background-color: #1b1b1b; color: white; overflow-x: hidden; } header { display: flex; width: 100%; background-color: blueviolet; justify-content: space-between; align-items: center; padding: 10px 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); z-index: 1000; } .nav { display: flex; align-items: center; } .judul { color: white; } .judul span { color: aqua; } .nav a { font-size: 1.04rem; margin: 0 15px; padding: 8px 0; color: white; transition: 0.3s ease; } .nav a:hover { color: rgb(200, 200, 200); } .cari { display: flex; background-color: rgb(148, 92, 201); border-radius: 4px; margin-right: 20px; } .cari a { display: flex; align-items: center; padding: 0 10px; } .cari img { width: 20px; height: 20px; } .cari input { border: none; padding: 10px 10px; border-radius: 4px; color: white; background-color: transparent; } .cari input::placeholder { color: white; opacity: 0.8; } .cari input:focus { outline: none; } footer { background-color: blueviolet; text-align: center; padding: 10px 0px 2px 0px; margin-top: 50px;} .medsos { margin: 20px; width: 40px; display: inline-block; } .medsos img { width: 30px; border-radius: 50%; transition: 0.3s; } .medsos img:hover { background-color: #1b1b1b25; transform: scale(1.1); } .text-footer { margin: 0px auto 1px auto; width: 70%; } .detail-container { width: 85%; margin: 40px auto; background-color: #201f1f; padding: 30px; border-radius: 8px; } .detail-info { display: flex; gap: 30px; margin-bottom: 40px; flex-wrap: wrap; } .detail-thumbnail { flex-shrink: 0; width: 250px; } .detail-thumbnail img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); } .detail-text { display: flex; flex-direction: column; flex-grow: 1; } .detail-text h1 { font-size: 2.5rem; margin-bottom: 15px; color: blueviolet; } .genre-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; } .genre-list span { background-color: #333; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; } .synopsis-section h2 { border-bottom: 2px solid blueviolet; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; } .synopsis-section p { line-height: 1.6; color: #ccc; } .chapter-list-container h2 { font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 10px; } #chapter-list-ul { list-style: none; padding: 0; max-height: 500px; overflow-y: auto; padding-right: 10px; } #chapter-list-ul::-webkit-scrollbar { width: 8px; } #chapter-list-ul::-webkit-scrollbar-track { background: #2c2c2c; } #chapter-list-ul::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; } #chapter-list-ul::-webkit-scrollbar-thumb:hover { background: #777; } #chapter-list-ul li { background-color: #2c2c2c; margin-bottom: 8px; border-radius: 5px; transition: background-color 0.2s; } #chapter-list-ul li:hover { background-color: #3a3a3a; } #chapter-list-ul li a { display: flex; justify-content: space-between; padding: 15px; font-size: 1.1rem; } .chapter-title { color: white; } .chapter-release { color: #aaa; font-size: 0.9rem; } .similar-container { margin-top: 50px; } .similar-container h2 { font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 10px; } .items-popular { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); gap: 20px; } .card { display: flex; flex-direction: column; width: 100%; overflow: hidden; } .logo-komik{ background-color: #333; width: 100%; height: 180px; overflow: hidden; border-radius: 10px; } .card .logo-komik img { border-radius: 10px; width: 100%; height: 100%; object-fit: cover; transition: 0.2s ease; } .card .logo-komik img:hover{ transform: scale(1.1); } .deskripsi-komik h3 { font-size: 1rem; margin-top: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .message-container { text-align: center; padding: 50px; font-size: 1.2rem; } .home{border-bottom: 1px solid #ffffff;}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><i><h1 class="judul">Moon<span>Komik</span></h1></i></a>
+        <div class="nav">
+            <a href="index.html" class="home"><p>Home</p></a>
+            <a href="/Manga-List/manga-list.html"><p>Manga List</p></a>
+        </div>
+        <div class="cari">
+            <input type="text" placeholder="Search">
+            <a href="#"><img src="../assets/search.png" alt="Search"></a>
+        </div>
+    </header>
+
+    <div id="message-container" class="message-container"></div>
+    <main id="main-content" class="detail-container" style="display: none;"></main>
+
+    <footer>
+    </footer>
+
+    <script>
+        const mainContent = document.getElementById('main-content');
+        const messageContainer = document.getElementById('message-container');
+        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+
+        function displayComicDetails(data) {
+            mainContent.innerHTML = `
+                <section class="detail-info">
+                    <div class="detail-thumbnail">
+                        <img id="comic-thumbnail" src="${data.thumbnail}" alt="Thumbnail ${data.title}">
+                    </div>
+                    <div class="detail-text">
+                        <h1 id="comic-title">${data.title}</h1>
+                        <div id="genre-list" class="genre-list"></div>
+                        <div class="synopsis-section">
+                            <h2>Sinopsis</h2>
+                            <p id="comic-synopsis">${data.synopsis}</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="chapter-list-container">
+                    <h2>Daftar Chapter</h2>
+                    <ul id="chapter-list-ul"></ul>
+                </section>
+                <section class="similar-container">
+                    <h2>Komik Serupa</h2>
+                    <div id="similar-items" class="items-popular"></div>
+                </section>
+            `;
+            
+            document.title = data.title + ' - MoonKomik';
+            
+            const genreContainer = mainContent.querySelector('#genre-list');
+            data.genre.forEach(genreName => {
+                const genreSpan = document.createElement('span');
+                genreSpan.textContent = genreName;
+                genreContainer.appendChild(genreSpan);
+            });
+            
+            const chapterList = mainContent.querySelector('#chapter-list-ul');
+            const comicParam = data.param; // misal: "eternally-regressing-knight"
+
+            data.chapters.forEach(chapter => {
+                // Ekstrak angka dari judul chapter, misal: "64" dari "Chapter 64"
+                const chapterNumberMatch = chapter.chapter.match(/\d+/);
+                if (!chapterNumberMatch) return; // Lewati jika tidak ada angka
+                const chapterNumber = chapterNumberMatch[0];
+
+                const listItem = document.createElement('li');
+                // Buat link ke `baca-chapter.html` dengan parameter `comic` dan `chapnum`
+                listItem.innerHTML = `
+                    <a href="baca-chapter.html?comic=${comicParam}&chapnum=${chapterNumber}">
+                        <span class="chapter-title">${chapter.chapter}</span>
+                        <span class="chapter-release">${chapter.release}</span>
+                    </a>
+                `;
+                chapterList.appendChild(listItem);
+            });
+
+            const similarItemsContainer = mainContent.querySelector('#similar-items');
+            data.similars.forEach(similarComic => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <a href="detail-komik.html?comic=${similarComic.param}" class="logo-komik">
+                        <img src="${similarComic.thumbnail}" alt="Sampul ${similarComic.title}">
+                    </a>
+                    <div class="deskripsi-komik">
+                        <h3>${similarComic.title}</h3>
+                    </div>
+                `;
+                similarItemsContainer.appendChild(card);
+            });
+            
+            mainContent.style.display = 'block';
+        }
+        
+        async function fetchComicDetails() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const comicParam = urlParams.get('comic');
+
+            if (!comicParam) {
+                messageContainer.textContent = 'Komik tidak ditemukan. Silakan kembali ke halaman utama.';
+                messageContainer.style.color = 'red';
+                return;
+            }
+            
+            messageContainer.textContent = 'Loading...';
+            
+            const fetchUrl = `${API_BASE_URL}${comicParam}.json`;
+
+            try {
+                const response = await fetch(fetchUrl);
+                if (!response.ok) {
+                    throw new Error(`Komik dengan param "${comicParam}" tidak ditemukan (Status ${response.status})`);
+                }
+                const jsonData = await response.json();
+                
+                messageContainer.style.display = 'none';
+                displayComicDetails(jsonData.data);
+
+            } catch (error) {
+                console.error("Fetch Error:", error);
+                messageContainer.textContent = 'Gagal memuat data komik. Mungkin komik ini belum tersedia.';
+                messageContainer.style.color = 'red';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchComicDetails);
+    </script>
+</body>
+</html>

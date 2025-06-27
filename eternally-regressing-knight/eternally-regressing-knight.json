@@ -1,0 +1,444 @@
+{
+"data": {
+"title": "Komik Eternally Regressing Knight",
+"param": "eternally-regressing-knight",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/eternally-regressing-knight/manga_thumbnail-A2-Eternally-Regressing-Knight.jpg",
+"genre": [
+"Action",
+"Adventure",
+"Fantasy",
+"Seinen"
+],
+"synopsis": "Pengorbanan dan harapan menjadi tema utama dalam pertempuran sang kesatria melawan takdirnya.",
+"chapters": [
+{
+"chapter": "Chapter 64",
+"param": "eternally-regressing-knight-chapter-64",
+"release": "28/06/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-64"
+},
+{
+"chapter": "Chapter 63",
+"param": "eternally-regressing-knight-chapter-63",
+"release": "20/06/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-63"
+},
+{
+"chapter": "Chapter 62",
+"param": "eternally-regressing-knight-chapter-62",
+"release": "14/06/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-62"
+},
+{
+"chapter": "Chapter 61",
+"param": "eternally-regressing-knight-chapter-61",
+"release": "07/06/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-61"
+},
+{
+"chapter": "Chapter 60",
+"param": "eternally-regressing-knight-chapter-60",
+"release": "31/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-60"
+},
+{
+"chapter": "Chapter 59",
+"param": "eternally-regressing-knight-chapter-59",
+"release": "23/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-59"
+},
+{
+"chapter": "Chapter 58",
+"param": "eternally-regressing-knight-chapter-58",
+"release": "17/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-58"
+},
+{
+"chapter": "Chapter 57",
+"param": "eternally-regressing-knight-chapter-57",
+"release": "13/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-57"
+},
+{
+"chapter": "Chapter 56",
+"param": "eternally-regressing-knight-chapter-56",
+"release": "13/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-56"
+},
+{
+"chapter": "Chapter 55",
+"param": "eternally-regressing-knight-chapter-55",
+"release": "13/05/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-55"
+},
+{
+"chapter": "Chapter 54",
+"param": "eternally-regressing-knight-chapter-54",
+"release": "19/04/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-54"
+},
+{
+"chapter": "Chapter 53",
+"param": "eternally-regressing-knight-chapter-53",
+"release": "12/04/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-53"
+},
+{
+"chapter": "Chapter 52",
+"param": "eternally-regressing-knight-chapter-52",
+"release": "05/04/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-52"
+},
+{
+"chapter": "Chapter 51",
+"param": "eternally-regressing-knight-chapter-51",
+"release": "29/03/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-51"
+},
+{
+"chapter": "Chapter 50",
+"param": "eternally-regressing-knight-chapter-50",
+"release": "23/03/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-50"
+},
+{
+"chapter": "Chapter 49",
+"param": "eternally-regressing-knight-chapter-49",
+"release": "15/03/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-49"
+},
+{
+"chapter": "Chapter 48",
+"param": "eternally-regressing-knight-chapter-48",
+"release": "08/03/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-48"
+},
+{
+"chapter": "Chapter 47",
+"param": "eternally-regressing-knight-chapter-47",
+"release": "01/03/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-47"
+},
+{
+"chapter": "Chapter 46",
+"param": "eternally-regressing-knight-chapter-46",
+"release": "22/02/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-46"
+},
+{
+"chapter": "Chapter 45",
+"param": "eternally-regressing-knight-chapter-45",
+"release": "15/02/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-45"
+},
+{
+"chapter": "Chapter 44",
+"param": "eternally-regressing-knight-chapter-44",
+"release": "08/02/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-44"
+},
+{
+"chapter": "Chapter 43",
+"param": "eternally-regressing-knight-chapter-43",
+"release": "01/02/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-43"
+},
+{
+"chapter": "Chapter 42",
+"param": "eternally-regressing-knight-chapter-42",
+"release": "25/01/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-42"
+},
+{
+"chapter": "Chapter 41",
+"param": "eternally-regressing-knight-chapter-41",
+"release": "18/01/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-41"
+},
+{
+"chapter": "Chapter 40",
+"param": "eternally-regressing-knight-chapter-40",
+"release": "11/01/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-40"
+},
+{
+"chapter": "Chapter 39",
+"param": "eternally-regressing-knight-chapter-39",
+"release": "04/01/2025",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-39"
+},
+{
+"chapter": "Chapter 38",
+"param": "eternally-regressing-knight-chapter-38",
+"release": "28/12/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-38"
+},
+{
+"chapter": "Chapter 37",
+"param": "eternally-regressing-knight-chapter-37",
+"release": "21/12/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-37"
+},
+{
+"chapter": "Chapter 36",
+"param": "eternally-regressing-knight-chapter-36",
+"release": "14/12/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-36"
+},
+{
+"chapter": "Chapter 35",
+"param": "eternally-regressing-knight-chapter-35",
+"release": "07/12/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-35"
+},
+{
+"chapter": "Chapter 34",
+"param": "eternally-regressing-knight-chapter-34",
+"release": "30/11/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-34"
+},
+{
+"chapter": "Chapter 33",
+"param": "eternally-regressing-knight-chapter-33",
+"release": "23/11/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-33"
+},
+{
+"chapter": "Chapter 32",
+"param": "eternally-regressing-knight-chapter-32",
+"release": "16/11/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-32"
+},
+{
+"chapter": "Chapter 31",
+"param": "eternally-regressing-knight-chapter-31",
+"release": "09/11/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-31"
+},
+{
+"chapter": "Chapter 30",
+"param": "eternally-regressing-knight-chapter-30",
+"release": "02/11/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-30"
+},
+{
+"chapter": "Chapter 29",
+"param": "eternally-regressing-knight-chapter-29",
+"release": "26/10/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-29"
+},
+{
+"chapter": "Chapter 28",
+"param": "eternally-regressing-knight-chapter-28",
+"release": "19/10/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-28"
+},
+{
+"chapter": "Chapter 27",
+"param": "eternally-regressing-knight-chapter-27",
+"release": "12/10/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-27"
+},
+{
+"chapter": "Chapter 26",
+"param": "eternally-regressing-knight-chapter-26",
+"release": "05/10/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-26"
+},
+{
+"chapter": "Chapter 25",
+"param": "eternally-regressing-knight-chapter-25",
+"release": "28/09/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-25"
+},
+{
+"chapter": "Chapter 24",
+"param": "eternally-regressing-knight-chapter-24",
+"release": "23/09/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-24"
+},
+{
+"chapter": "Chapter 23",
+"param": "eternally-regressing-knight-chapter-23",
+"release": "14/09/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-23"
+},
+{
+"chapter": "Chapter 22",
+"param": "eternally-regressing-knight-chapter-22",
+"release": "07/09/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-22"
+},
+{
+"chapter": "Chapter 21",
+"param": "eternally-regressing-knight-chapter-21",
+"release": "31/08/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-21"
+},
+{
+"chapter": "Chapter 20",
+"param": "eternally-regressing-knight-chapter-20",
+"release": "24/08/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-20"
+},
+{
+"chapter": "Chapter 19",
+"param": "eternally-regressing-knight-chapter-19",
+"release": "17/08/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-19"
+},
+{
+"chapter": "Chapter 18",
+"param": "eternally-regressing-knight-chapter-18",
+"release": "10/08/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-18"
+},
+{
+"chapter": "Chapter 17",
+"param": "eternally-regressing-knight-chapter-17",
+"release": "03/08/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-17"
+},
+{
+"chapter": "Chapter 16",
+"param": "eternally-regressing-knight-chapter-16",
+"release": "27/07/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-16"
+},
+{
+"chapter": "Chapter 15",
+"param": "eternally-regressing-knight-chapter-15",
+"release": "20/07/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-15"
+},
+{
+"chapter": "Chapter 14",
+"param": "eternally-regressing-knight-chapter-14",
+"release": "13/07/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-14"
+},
+{
+"chapter": "Chapter 13",
+"param": "eternally-regressing-knight-chapter-13",
+"release": "06/07/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-13"
+},
+{
+"chapter": "Chapter 12",
+"param": "eternally-regressing-knight-chapter-12",
+"release": "29/06/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-12"
+},
+{
+"chapter": "Chapter 11",
+"param": "eternally-regressing-knight-chapter-11",
+"release": "22/06/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-11"
+},
+{
+"chapter": "Chapter 10",
+"param": "eternally-regressing-knight-chapter-10",
+"release": "17/06/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-10"
+},
+{
+"chapter": "Chapter 9",
+"param": "eternally-regressing-knight-chapter-09",
+"release": "08/06/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-09"
+},
+{
+"chapter": "Chapter 8",
+"param": "eternally-regressing-knight-chapter-08",
+"release": "01/06/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-08"
+},
+{
+"chapter": "Chapter 7",
+"param": "eternally-regressing-knight-chapter-07",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-07"
+},
+{
+"chapter": "Chapter 6",
+"param": "eternally-regressing-knight-chapter-06",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-06"
+},
+{
+"chapter": "Chapter 5",
+"param": "eternally-regressing-knight-chapter-05",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-05"
+},
+{
+"chapter": "Chapter 4",
+"param": "eternally-regressing-knight-chapter-04",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-04"
+},
+{
+"chapter": "Chapter 3",
+"param": "eternally-regressing-knight-chapter-03",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-03"
+},
+{
+"chapter": "Chapter 2",
+"param": "eternally-regressing-knight-chapter-02",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-02"
+},
+{
+"chapter": "Chapter 1",
+"param": "eternally-regressing-knight-chapter-01",
+"release": "25/05/2024",
+"detail_url": "http://localhost:5500/api/komiku/chapter/eternally-regressing-knight-chapter-01"
+}
+],
+"similars": [
+{
+"title": "Becoming a God in Apocalypse Glossary",
+"thumbnail": "https://thumbnail.komiku.org/img/upload/becoming_a_god_in_apocalypse_glossary/img_683588623b4fc9.42055119.jpg",
+"synopsis": "Pertarungan antara kelompok-kelompok yang berbeda mempengaruhi perjalanan hidupnya.",
+"param": "becoming-a-god-in-apocalypse-glossary",
+"detail_url": "http://localhost:5500/api/komiku/becoming-a-god-in-apocalypse-glossary"
+},
+{
+"title": "If I Don’t Die Soon, I Will Rule The Demon Realm",
+"thumbnail": "https://thumbnail.komiku.org/img/upload/if_i_don___t_die_soon__i_will_rule_the_demon_realm/img_6853c1fe7377c2.78231358.jpg",
+"synopsis": "Seorang pria yang menghadapi kematian terjerumus ke dunia alam setan dan bertekad untuk menguasainya.",
+"param": "if-i-dont-die-soon-i-will-rule-the-demon-realm",
+"detail_url": "http://localhost:5500/api/komiku/if-i-dont-die-soon-i-will-rule-the-demon-realm"
+},
+{
+"title": "Youngest Son of the NamGung Clan",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/youngest-son-of-the-namgung-clan/manga_img_horizontal-Komik-Youngest-Son-of-the-NamGung-Clan.jpg",
+"synopsis": "Seorang anak bungsu yang dianggap lemah justru menunjukkan kekuatannya.",
+"param": "youngest-son-of-the-namgung-clan",
+"detail_url": "http://localhost:5500/api/komiku/youngest-son-of-the-namgung-clan"
+},
+{
+"title": "SSS-level Paladin Who Breaks All Logic",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/sss-level-paladin-who-breaks-all-logic/manga_img_horizontal-Back-SSS-level-Paladin-Who-Breaks-All-Logic.jpg",
+"synopsis": "Perjalanan seorang paladin yang berusaha mempertahankan nilai kemanusiaan di tengah kekuatannya.",
+"param": "sss-level-paladin-who-breaks-all-logic",
+"detail_url": "http://localhost:5500/api/komiku/sss-level-paladin-who-breaks-all-logic"
+},
+{
+"title": "My Unbeatable Passive Skill Lets Me Deal Massive Damage!",
+"thumbnail": "https://thumbnail.komiku.org/img/upload/my_unbeatable_passive_skill_lets_me_deal_massive_damage_/img_68356ac007f863.51156140.jpg",
+"synopsis": "Skill unik membuatnya mampu memberikan damage besar tanpa usaha berlebih.",
+"param": "my-unbeatable-passive-skill-lets-me-deal-massive-damage",
+"detail_url": "http://localhost:5500/api/komiku/my-unbeatable-passive-skill-lets-me-deal-massive-damage"
+},
+{
+"title": "Renkinjutsu-shidesu. Jichou Wa Gomibako Ni Sutete Kimashita",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/renkinjutsu-shidesu-jichou-wa-gomibako-ni-sutete-kimashita/manga_img_horizontal-A1-Renkinjutsu-shidesu.-Jichou-Wa-Gomibako-Ni-Sutete-Kimashita.jpg",
+"synopsis": "Sang alkemis menemukan makna hidup baru setelah meninggalkan pekerjaannya.",
+"param": "renkinjutsu-shidesu-jichou-wa-gomibako-ni-sutete-kimashita",
+"detail_url": "http://localhost:5500/api/komiku/renkinjutsu-shidesu-jichou-wa-gomibako-ni-sutete-kimashita"
+}
+]
+}
+}

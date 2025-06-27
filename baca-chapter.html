@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Komik - MoonKomik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* ... CSS tidak berubah ... */
+        * { padding: 0; margin: 0; box-sizing: border-box; } body { font-family: "Poppins", sans-serif; background-color: #121212; color: white; } a { color: inherit; text-decoration: none; } .reader-header { background-color: #1f1f1f; padding: 10px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 1000; text-align: center; } .reader-header a { font-size: 1.5rem; color: white; } .reader-header a span { color: aqua; } .reader-nav { display: flex; justify-content: center; align-items: center; padding: 15px; background-color: #1f1f1f; gap: 15px; position: sticky; top: 60px; z-index: 999; transition: top 0.3s ease-in-out; } .nav--hidden { top: -20px; } .nav-btn { background-color: blueviolet; padding: 8px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.2s; } .nav-btn:hover { background-color: #7a1fb5; } .nav-btn.disabled { background-color: #555; color: #999; cursor: not-allowed; } #chapter-select { background-color: #333; color: white; border: 1px solid #555; padding: 8px; border-radius: 5px; font-size: 1rem; } .reader-container { max-width: 800px; margin: 20px auto; } #image-container img { display: block; width: 100%; height: auto; margin-bottom: -2px; } .message-container { text-align: center; padding: 50px; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <header class="reader-header">
+        <a href="index.html"><h1>Moon<span>Komik</span></h1></a>
+    </header>
+
+    <nav id="reader-nav" class="reader-nav" style="display: none;">
+        <a id="prev-chapter-btn" class="nav-btn disabled">‹ Prev</a>
+        <select id="chapter-select"></select>
+        <a id="next-chapter-btn" class="nav-btn disabled">Next ›</a>
+    </nav>
+    
+    <div id="message-container" class="message-container"></div>
+    <main id="reader-container" class="reader-container"></main>
+
+    <script>
+        const messageContainer = document.getElementById('message-container');
+        const readerContainer = document.getElementById('reader-container');
+        const readerNav = document.getElementById('reader-nav');
+        const prevBtn = document.getElementById('next-chapter-btn');
+        const nextBtn = document.getElementById('prev-chapter-btn');
+        const chapterSelect = document.getElementById('chapter-select');
+        
+        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+
+        function displayChapterImages(imageData) {
+            readerContainer.innerHTML = '';
+            imageData.forEach(imageUrl => {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                img.alt = 'Panel Komik';
+                readerContainer.appendChild(img);
+            });
+        }
+
+        async function loadChapter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const comicParam = urlParams.get('comic');
+            const chapterNumber = urlParams.get('chapnum');
+
+            if (!comicParam || !chapterNumber) {
+                messageContainer.textContent = 'Informasi komik atau nomor chapter tidak lengkap.';
+                return;
+            }
+
+            messageContainer.textContent = 'Loading...';
+            readerNav.style.display = 'none';
+
+            try {
+                // 1. Fetch metadata untuk navigasi
+                const metaUrl = `${API_BASE_URL}${comicParam}.json`;
+                const metaResponse = await fetch(metaUrl);
+                if (!metaResponse.ok) throw new Error('Gagal memuat detail komik.');
+                const metaData = (await metaResponse.json()).data;
+                
+                document.title = `${metaData.title} | Chapter ${chapterNumber} - MoonKomik`;
+                
+                // 2. Cari chapter berdasarkan NOMORNYA
+                const allChapters = metaData.chapters;
+                const currentIndex = allChapters.findIndex(ch => {
+                    const numMatch = ch.chapter.match(/\d+/);
+                    return numMatch && numMatch[0] === chapterNumber;
+                });
+
+                if (currentIndex === -1) throw new Error('Chapter tidak ditemukan dalam daftar.');
+
+                const prevChapter = currentIndex > 0 ? allChapters[currentIndex - 1] : null;
+                const nextChapter = currentIndex < allChapters.length - 1 ? allChapters[currentIndex + 1] : null;
+
+                // =================================================================
+                // === BAGIAN PENTING: MEMASTIKAN LINK HREF SUDAH BENAR ===
+                // =================================================================
+                // 3. Update tombol navigasi Prev
+                if (prevChapter) {
+                    const prevChapterNumber = prevChapter.chapter.match(/\d+/)[0];
+                    prevBtn.classList.remove('disabled');
+                    // Pastikan href ini menggunakan prevChapterNumber
+                    prevBtn.href = `baca-chapter.html?comic=${comicParam}&chapnum=${prevChapterNumber}`;
+                } else {
+                    prevBtn.classList.add('disabled');
+                    prevBtn.href = '#';
+                }
+                // Update tombol navigasi Next
+                if (nextChapter) {
+                    const nextChapterNumber = nextChapter.chapter.match(/\d+/)[0];
+                    nextBtn.classList.remove('disabled');
+                    // Pastikan href ini menggunakan nextChapterNumber
+                    nextBtn.href = `baca-chapter.html?comic=${comicParam}&chapnum=${nextChapterNumber}`;
+                } else {
+                    nextBtn.classList.add('disabled');
+                    nextBtn.href = '#';
+                }
+                // =================================================================
+
+                // Update dropdown
+                chapterSelect.innerHTML = '';
+                allChapters.forEach(ch => {
+                    const numMatch = ch.chapter.match(/\d+/);
+                    if (!numMatch) return;
+                    const num = numMatch[0];
+
+                    const option = document.createElement('option');
+                    option.value = num;
+                    option.textContent = ch.chapter;
+                    if (num === chapterNumber) {
+                        option.selected = true;
+                    }
+                    chapterSelect.appendChild(option);
+                });
+
+                chapterSelect.onchange = () => {
+                    const selectedChapterNumber = chapterSelect.value;
+                    window.location.href = `baca-chapter.html?comic=${comicParam}&chapnum=${selectedChapterNumber}`;
+                };
+                
+                // 4. Fetch data GAMBAR menggunakan URL baru
+                const chapterImagesUrl = `${API_BASE_URL}chapter${chapterNumber}.json`;
+                const chapterResponse = await fetch(chapterImagesUrl);
+
+                if (!chapterResponse.ok) {
+                    throw new Error(`Gagal memuat data gambar chapter (Status: ${chapterResponse.status})`);
+                }
+                const chapterJsonData = await chapterResponse.json();
+                
+                // 5. Tampilkan semua
+                messageContainer.style.display = 'none';
+                readerNav.style.display = 'flex';
+                displayChapterImages(chapterJsonData.data);
+
+            } catch (error) {
+                console.error("Gagal memuat chapter:", error);
+                readerNav.style.display = 'none';
+                messageContainer.textContent = `Gagal memuat chapter. ${error.message}`;
+                messageContainer.style.color = 'red';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadChapter);
+
+        // Script untuk show/hide navigasi tidak berubah
+        let lastScrollTop = 0;
+        const readerNavForScroll = document.getElementById('reader-nav');
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.scrollY || document.documentElement.scrollTop;
+            if (readerNavForScroll.style.display !== 'none') {
+                if (currentScroll > lastScrollTop && currentScroll > 150) { 
+                    readerNavForScroll.classList.add("nav--hidden");
+                } else {
+                    readerNavForScroll.classList.remove("nav--hidden");
+                }
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    </script>
+</body>
+</html>

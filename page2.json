@@ -1,0 +1,86 @@
+{
+"next_page": "page3.json",
+"prev_page": "page1.json",
+"data": [
+{
+"title": "After Improperly Licking a Dog, I Became a Billionaire",
+"description": "Sebuah aksi tak terduga membuka jalan bagi kesuksesan luar biasa.",
+"latest_chapter": "Chapter 213",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/after-improperly-licking-a-dog-i-became-a-billionaire/manga_img_horizontal-Back-After-Improperly-Licking-a-Dog-I-Became-a-Billionaire.jpg",
+"param": "after-improperly-licking-a-dog-i-became-a-billionaire",
+"detail_url": "http://localhost:5500/api/komiku/after-improperly-licking-a-dog-i-became-a-billionaire"
+},
+{
+"title": "Chronicles of the Reincarnated Demon God",
+"description": "Persahabatan dan pengorbanan menjadi kunci dalam menentukan nasib sang dewa iblis.",
+"latest_chapter": "Chapter 50",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/chronicles-of-the-reincarnated-demon-god/manga_img_horizontal-A1-Chronicles-of-the-Reincarnated-Demon-God.jpg",
+"param": "chronicles-of-the-reincarnated-demon-god",
+"detail_url": "http://localhost:5500/api/komiku/chronicles-of-the-reincarnated-demon-god"
+},
+{
+"title": "The Nebula’s Civilization",
+"description": "Peradaban Nebula mengisahkan penemuan dunia baru penuh teknologi dan budaya unik.",
+"latest_chapter": "Chapter 91",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/the-nebulas-civilization/manga_img_horizontal-Back-The-Nebulas-Civilization.jpg",
+"param": "the-nebulas-civilization",
+"detail_url": "http://localhost:5500/api/komiku/the-nebulas-civilization"
+},
+{
+"title": "Becoming the Swordmaster Rank Young Lord of the Sichuan Tang Family",
+"description": "Seorang pewaris muda berjuang menjadi ahli pedang terbaik di tengah intrik keluarga.",
+"latest_chapter": "Chapter 78",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/becoming-the-swordmaster-rank-young-lord-of-the-sichuan-tang-family/manga_img_horizontal-Back-BECOMING-THE-SWORDMASTER-RANK-YOUNG-LORD-OF-THE-SICHUAN-TANG-FAMILY.jpg",
+"param": "becoming-the-swordmaster-rank-young-lord-of-the-sichuan-tang-family",
+"detail_url": "http://localhost:5500/api/komiku/becoming-the-swordmaster-rank-young-lord-of-the-sichuan-tang-family"
+},
+{
+"title": "My Disciples Are All Big Villains",
+"description": "Seorang master menghadapi tantangan besar saat murid-muridnya ternyata adalah penjahat terkenal.",
+"latest_chapter": "Chapter 385",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/my-disciples-are-all-big-villains/manga_img_horizontal-My-Disciples-Are-All-Big-Villains-2.png",
+"param": "my-disciples-are-all-big-villains",
+"detail_url": "http://localhost:5500/api/komiku/my-disciples-are-all-big-villains"
+},
+{
+"title": "Becoming a Legendary Ace Employee",
+"description": "Menghadapi tantangan kantor dengan semangat pantang menyerah.",
+"latest_chapter": "Chapter 85",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/becoming-a-legendary-ace-employee/manga_img_horizontal-Back-Becoming-a-Legendary-Ace-Employee.jpg",
+"param": "becoming-a-legendary-ace-employee",
+"detail_url": "http://localhost:5500/api/komiku/becoming-a-legendary-ace-employee"
+},
+{
+"title": "Uragirareta S Rank Boukensha no Ore wa, Aisuru Dorei no Kanojora to Tomoni Dorei dake no Harem Guild o Tsukuru",
+"description": "Seorang petualang S-Rank membangun guild unik yang terdiri dari budak dan kekasihnya.",
+"latest_chapter": "Chapter 113",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/uragirareta-s-rank-boukensha-no-ore-wa-aisuru-dorei-no-kanojora-to-tomoni-dorei-dake-no-harem-guild-o-tsukuru/manga_img_horizontal-Back-Uragirareta-S-Rank-Boukensha-no-Ore-wa.jpg",
+"param": "uragirareta-s-rank-boukensha-no-ore-wa-aisuru-dorei-no-kanojora-to-tomoni-dorei-dake-no-harem-guild-o-tsukuru",
+"detail_url": "http://localhost:5500/api/komiku/uragirareta-s-rank-boukensha-no-ore-wa-aisuru-dorei-no-kanojora-to-tomoni-dorei-dake-no-harem-guild-o-tsukuru"
+},
+{
+"title": "Level 1 Player",
+"description": "Cerita menggabungkan elemen pertarungan, persahabatan, dan pengungkapan rahasia dalam satu plot menarik.",
+"latest_chapter": "Chapter 111",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/level-1-player/manga_img_horizontal-Komik-Level-1-Player.jpg",
+"param": "level-1-player",
+"detail_url": "http://localhost:5500/api/komiku/level-1-player"
+},
+{
+"title": "Myriad Tribes Invasion: Rearguard’s Resolute Unity",
+"description": "Kerja sama antara suku yang berbeda menjadi senjata utama dalam menghadapi ancaman besar.",
+"latest_chapter": "Chapter 45",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/myriad-tribes-invasion-rearguards-resolute-unity/manga_img_horizontal-Back-Myriad-Tribes-Invasion-Rearguards-Resolute-Unity.jpg",
+"param": "myriad-tribes-invasion-rearguards-resolute-unity",
+"detail_url": "http://localhost:5500/api/komiku/myriad-tribes-invasion-rearguards-resolute-unity"
+},
+{
+"title": "I Randomly Have A New Career Every Week",
+"description": "Pengalaman unik dari profesi berbeda membentuk karakter tokoh utama.",
+"latest_chapter": "Chapter 564",
+"thumbnail": "https://thumbnail.komiku.org/uploads/manga/i-randomly-have-a-new-career-every-week/manga_img_horizontal-Komik-I-Randomly-Have-A-New-Career-Every-Week.jpg",
+"param": "i-randomly-have-a-new-career-every-week",
+"detail_url": "http://localhost:5500/api/komiku/i-randomly-have-a-new-career-every-week"
+}
+]
+}

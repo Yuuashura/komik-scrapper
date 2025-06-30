@@ -87,7 +87,7 @@
         const nextBtn = document.getElementById('prev-chapter-btn');
         const chapterSelect = document.getElementById('chapter-select');
         
-        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+        const API_BASE_URL = 'https://weeb-scraper.onrender.com/api/komiku/';
 
         function displayChapterImages(imageData) {
             readerContainer.innerHTML = '';
@@ -114,7 +114,7 @@
 
             try {
                 // 1. Fetch metadata untuk navigasi
-                const metaUrl = `${API_BASE_URL}${comicParam}/${comicParam}.json`;
+                const metaUrl = `${API_BASE_URL}${comicParam}`;
                 const metaResponse = await fetch(metaUrl);
                 if (!metaResponse.ok) throw new Error('Gagal memuat detail komik.');
                 const metaData = (await metaResponse.json()).data;
@@ -180,7 +180,7 @@
                 };
                 
                 // 4. Fetch data GAMBAR menggunakan URL baru
-                const chapterImagesUrl = `${API_BASE_URL}/${comicParam}/chapter${chapterNumber}.json`;
+                const chapterImagesUrl = `${API_BASE_URL}/chapter/${comicParam}-chapter-${chapterNumber}`;
                 const chapterResponse = await fetch(chapterImagesUrl);
 
                 if (!chapterResponse.ok) {

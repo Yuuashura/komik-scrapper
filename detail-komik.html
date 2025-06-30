@@ -83,7 +83,7 @@
     <script>
         const mainContent = document.getElementById('main-content');
         const messageContainer = document.getElementById('message-container');
-        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+        const API_BASE_URL = 'https://weeb-scraper.onrender.com/api/komiku/';
 
         function displayComicDetails(data) {
             mainContent.innerHTML = `
@@ -170,7 +170,7 @@
             
             messageContainer.textContent = 'Loading...';
             
-            const fetchUrl = `${API_BASE_URL}${comicParam}/${comicParam}.json`;
+            const fetchUrl = `${API_BASE_URL}${comicParam}`;
 
             try {
                 const response = await fetch(fetchUrl);

@@ -74,6 +74,15 @@
         margin-right: 20px;
     }
 
+    .cari button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+    }
+
     .cari a {
         display: flex;
         align-items: center;
@@ -437,10 +446,10 @@
                 <a href="Register/register.html"><p>Daftar</p></a>
                 <a href="Tentang/tentang.html"><p>Tentang</p></a>
             </div>
-            <div class="cari">
-                <input type="text" placeholder="Search">
-                <a href="#"><img src="../assets/search.png" alt="Search"></a>
-            </div>
+            <form class="cari" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Cari komik..." autocomplete="off">
+                <button type="submit" id="searchButton"><img src="assets/search.png" alt="Search"></button>
+            </form>
         </header>
 
         <div class="slider">
@@ -548,7 +557,8 @@
         const newPrevBtn = document.getElementById('new-prev');
         
         // URL Dasar dari repositori data Anda (diakhiri dengan /)
-        const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+        // const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
+        const API_BASE_URL = 'http://localhost:3000/api/komiku?page=';
         
         // Variabel untuk melacak status saat ini
         let currentPage = 1;
@@ -610,7 +620,7 @@ function displayComics(comics) {
             popularItemsContainer.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Loading...</p>';
             
             // Membangun URL lengkap berdasarkan nomor halaman
-            const fullUrl = `${API_BASE_URL}page${pageNumber}.json`;
+            const fullUrl = `${API_BASE_URL}${pageNumber}&tag=hot`;
         
             try {
                 const response = await fetch(fullUrl);

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MoonKomik</title>
+        <link rel="icon" href="https://github.com/Yuuashura/icon-pack/blob/main/4.gif?raw=true">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -74,15 +75,6 @@
         margin-right: 20px;
     }
 
-    .cari button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-    }
-
     .cari a {
         display: flex;
         align-items: center;
@@ -114,7 +106,7 @@
     .update-container {
         cursor: pointer;
         flex: 0 0 100%; 
-        height: 400px;
+        height: 500px;
         border-radius: 10px;
         overflow: hidden;
         background-size: cover;
@@ -236,8 +228,9 @@
 
     .slider{
         position: relative;
-        width: 85%;
+        width: 1150px;
         margin: 40px auto;
+        height: 500px;
     }
 
     .slider-items{
@@ -278,7 +271,7 @@
     }
 
     .container-popular{
-        width: 85%;
+        width: 1150px;
         margin: 40px auto;
         border-radius: 6px;
         background-color: #201f1f;
@@ -302,23 +295,23 @@
     .card {
         display: flex;
         flex-direction: column;
-        width: 80%; /* Lebar card menyesuaikan grid */
+        width: 100%; /* Lebar card menyesuaikan grid */
         overflow: hidden;
     }
 
 
     .logo-komik{
         background-color: #333; /* Warna placeholder saat gambar loading */
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
+        width: 225px;
+        height: 150px;
+        /* overflow: hidden; */
         border-radius: 10px;
     }
 
     .card .logo-komik img {
         border-radius: 10px;
         width: 100%;
-        height: 100%;
+        height: 150px;
         object-fit: cover;
         transition: 0.2s ease;
     }
@@ -377,6 +370,53 @@
         display: flex;
         justify-content: space-between;
     }
+
+
+    .rating {
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara bintang dan angka */
+    font-family: sans-serif;
+    color: #e0e0e0;
+}
+
+/* Wadah untuk menumpuk bintang */
+.stars-outer {
+    position: relative;
+    display: inline-block;
+    font-size: 24px; /* Atur ukuran bintang di sini */
+}
+
+/* Pseudo-element untuk bintang KOSONG (lapisan bawah) */
+.stars-outer::before {
+    content: "★★★★★";
+    color: #444; /* Warna bintang kosong */
+}
+
+/* Wadah untuk bintang ISI (lapisan atas) */
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden; /* Ini yang akan "memotong" bintang */
+    
+    /* Atur lebarnya sesuai rating. Akan kita hitung di bawah */
+    width: 0; 
+}
+
+/* Pseudo-element untuk bintang ISI (lapisan atas) */
+.stars-inner::before {
+    content: "★★★★★";
+    color: #f8ce0b; /* Warna bintang yang terisi */
+}
+
+.rating-number {
+    font-size: 1rem;
+    font-weight: bold;
+}   
+
 
     .next-new-btn{
         text-align: center;
@@ -446,18 +486,18 @@
                 <a href="Register/register.html"><p>Daftar</p></a>
                 <a href="Tentang/tentang.html"><p>Tentang</p></a>
             </div>
-            <form class="cari" id="searchForm">
-                <input type="text" id="searchInput" placeholder="Cari komik..." autocomplete="off">
-                <button type="submit" id="searchButton"><img src="assets/search.png" alt="Search"></button>
-            </form>
+            <div class="cari">
+                <input type="text" placeholder="Search">
+                <a href="#"><img src="../assets/search.png" alt="Search"></a>
+            </div>
         </header>
 
         <div class="slider">
             <button id="prev-btn" class="btn-slide"><</button>
 
+            <a href="alya.html">
             <div class="slider-items">
 
-                <a href="alya.html">
                 <div class="update-container" style="background-image: url('assets/bg3.jpeg');">
 
                     <div class="filter">
@@ -474,7 +514,7 @@
                         <p>Slice of Life</p>
                     </div>
                     <div class="reading-now">
-                        <a href="#">Start Read</a>
+                        <a href="alya.html">Start Read</a>
                     </div>
                 </div>
                 <div class="right-up">
@@ -507,6 +547,8 @@
     </div>
 
 
+    
+
 
     <footer>
         <div class="medsos">
@@ -532,7 +574,6 @@
     </footer>
     </body>
     <script>
-        // --- LOGIKA SLIDER (BIARKAN SEPERTI ADANYA) ---
         const nextButton = document.getElementById('next-btn');
         const prevButton = document.getElementById('prev-btn');
         const sliderItems = document.querySelector('.slider-items');
@@ -550,36 +591,25 @@
         }
         
         
-        // --- LOGIKA BARU UNTUK PAGINASI BERBASIS NOMOR HALAMAN ---
         
         const popularItemsContainer = document.querySelector('.items-popular');
         const newNextBtn = document.getElementById('new-next');
         const newPrevBtn = document.getElementById('new-prev');
         
-        // URL Dasar dari repositori data Anda (diakhiri dengan /)
-        // const API_BASE_URL = 'https://raw.githubusercontent.com/Yuuashura/komik-scrapper/main/';
-        const API_BASE_URL = 'http://localhost:3000/api/komiku?page=';
-        
-        // Variabel untuk melacak status saat ini
+        const API_BASE_URL = 'https://weeb-scraper.onrender.com/api/komikcast?';
         let currentPage = 1;
-        let isFetching = false; // Mencegah klik ganda saat data sedang dimuat
+        let isFetching = false;
         
-// INI UNTUK SCRIPT DI index.html
 
 function displayComics(comics) {
     popularItemsContainer.innerHTML = '';
     if (!comics || comics.length === 0) {
-        // ... (kode error handling)
         return;
     }
 
     comics.forEach(comic => {
         const card = document.createElement('div');
         card.className = 'card';
-        
-        // --- PERUBAHAN DI SINI ---
-        // Link <a> sekarang mengarah ke detail-komik.html
-        // dengan menambahkan ?comic=[nama-param-unik]
         card.innerHTML = `
             <a href="detail-komik.html?comic=${comic.param}" class="logo-komik">
                 <img src="${comic.thumbnail}" alt="Sampul ${comic.title}">
@@ -590,7 +620,14 @@ function displayComics(comics) {
                 </h3>
                 <div class="chap">
                     <ul class="chapter-list">
-                        <li><a href="detail-komik.html?comic=${comic.param}"${comic.title}">${comic.latest_chapter}</a></li>
+                        <div class="rating">
+                            <div class="stars-outer">
+                                <div class="stars-inner" style="width: ${comic.rating * 10}%;"></div>
+                                </div>
+                                <span class="rating-number">${comic.rating}</span>
+                                </div>
+                                <li>
+                        <a href="detail-komik.html?comic=${comic.param}"${comic.title}">Rating : ${comic.rating}</a></li>
                     </ul>
                 </div>
             </div>
@@ -620,7 +657,8 @@ function displayComics(comics) {
             popularItemsContainer.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Loading...</p>';
             
             // Membangun URL lengkap berdasarkan nomor halaman
-            const fullUrl = `${API_BASE_URL}${pageNumber}&tag=hot`;
+            // const fullUrl = `${API_BASE_URL}page=${pageNumber}&tag=hot`;
+            const fullUrl = `${API_BASE_URL}page=${pageNumber}`;
         
             try {
                 const response = await fetch(fullUrl);
